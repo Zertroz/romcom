@@ -11,12 +11,20 @@ var tag2 = document.querySelector(".tagline-2")
 var viewForm = document.querySelector(".form-view")
 var viewHome = document.querySelector(".home-view")
 var viewSaved = document.querySelector(".saved-view")
+var coverInput = document.querySelector(".user-cover")
+var titleInput = document.querySelector(".user-title")
+var firstDescriptorInput = document.querySelector(".user-desc1")
+var secondDescriptorInput = document.querySelector(".user-desc2")
+var makeMyBookButton = document.querySelector(".create-new-book-button")
 
 // We've provided a few variables below
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-var currentCover;
+var currentCover = new Cover (coverImage, coverTitle, tag1, tag2) 
+
+
+
 
 // Add your event listeners here 👇
 
@@ -25,6 +33,8 @@ randomButton.addEventListener('click', createRandom)
 makeCoverButton.addEventListener('click', makeCoverToggle)
 viewSavedButton.addEventListener('click', savedCoversToggle)
 homeButton.addEventListener('click', homeButtonToggle)
+makeMyBookButton.addEventListener('click', makeMyBook, false)
+
 
 // Create your event handlers and other functions here 👇
 
@@ -60,6 +70,16 @@ function homeButtonToggle() {
   viewHome.classList.remove("hidden")
   viewSaved.classList.add('hidden')
   viewForm.classList.add("hidden")
+}
+
+
+function makeMyBook(){
+  event.preventDefault()
+  coverImage.src = coverInput.value
+  coverTitle.innerText = titleInput.value
+  tag1.innerText = firstDescriptorInput.value
+  tag2.innerText = secondDescriptorInput.value
+  homeButtonToggle()
 }
 
 // We've provided one function to get you started
