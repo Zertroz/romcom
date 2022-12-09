@@ -36,24 +36,30 @@ function createRandom(){
 }
 
 function makeCoverToggle() {
-  saveCoverButton.classList.toggle("hidden")
-  randomButton.classList.toggle("hidden")
-  homeButton.classList.toggle("hidden")
-  viewHome.classList.toggle("hidden")
-  viewForm.classList.toggle("hidden")
+  saveCoverButton.classList.add("hidden")
+  randomButton.classList.add("hidden")
+  homeButton.classList.remove("hidden")
+  viewHome.classList.add("hidden")
+  viewForm.classList.remove("hidden")
+  viewSaved.classList.add('hidden')
 }
 
 function savedCoversToggle() {
-  saveCoverButton.classList.toggle("hidden")
-  randomButton.classList.toggle("hidden")
-  homeButton.classList.toggle("hidden")
-  viewHome.classList.toggle("hidden")
-  viewSaved.classList.toggle('hidden')
+  saveCoverButton.classList.add("hidden")
+  randomButton.classList.add("hidden")
+  homeButton.classList.remove("hidden")
+  viewHome.classList.add("hidden")
+  viewSaved.classList.remove('hidden')
+  viewForm.classList.add("hidden")
 }
 
 function homeButtonToggle() {
-    makeCoverToggle()
-    savedCoversToggle()
+  saveCoverButton.classList.remove("hidden")
+  randomButton.classList.remove("hidden")
+  homeButton.classList.add("hidden")
+  viewHome.classList.remove("hidden")
+  viewSaved.classList.add('hidden')
+  viewForm.classList.add("hidden")
 }
 
 // We've provided one function to get you started
