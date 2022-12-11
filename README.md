@@ -7,7 +7,7 @@
 All the user needs to do is clone the repo or view the site from the github link.
 
 ### Preview of App:
-![romance novel covers]()
+![romance novel covers](https://user-images.githubusercontent.com/116397118/206936423-8606e8aa-9838-407f-afe5-2e39c7279030.png)
 
 ### Context:
 We worked on this project for about 2-3 hours a night for four nights, and then a whole 6 or so hours one day. As we're only on week 2 of the Turing program, we think this is a reasonable amount of time to have spent, especially considering there was a lot we just didn't understand.
