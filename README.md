@@ -1,41 +1,22 @@
-# RomCom
-
-A boilerplate repo. 
-
-## Set Up
-1. ONE teammate: fork this boilerplate repository 
-2. Clone down your new, forked repo
-3. cd into the repository
-4. Open it in your text editor
-5. View the project in the browser by running open index.html in your terminal
-6. Add all project partners and your assigned instructor as collaborators on the repository
-
-The project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/romcom-pair.html)
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # RomCom  
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+ We built a website that lets the user create random or form submitted romance novel covers. It can also save those covers to be viewed later, and allow the user to delete them. If the user really wants, they have plenty of romance novel covers at their disposal.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+All the user needs to do is clone the repo or view the site from the github link.
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![romance novel covers]()
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+We worked on this project for about 2-3 hours a night for four nights, and then a whole 6 or so hours one day. As we're only on week 2 of the Turing program, we think this is a reasonable amount of time to have spent, especially considering there was a lot we just didn't understand.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+The work was split evenly between [Kass](https://github.com/Zertroz) and [Bea](https://github.com/bea-ordonez), with some help from others.
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+We were primarily working with the DOM, using Javascript to alter an HTML document. We spent some time with a CSS file as well, but the majority of the focus was JavaScript. We also had to familiarize ourselves with the Git workflow, especially when it came to using branches.
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+Win number one is getting the project done! It was very stressful and required a lot of work and thought. Our absolute win is probably getting iteration 2 done within only an hour or so. We really struggled with iteration 4, though, as it required using logic we weren't familiar with. We managed to overcome this with help from others and a little research of our own.
