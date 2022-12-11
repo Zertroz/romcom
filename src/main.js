@@ -35,8 +35,7 @@ homeButton.addEventListener('click', homeButtonToggle)
 makeMyBookButton.addEventListener('click', makeMyBook, false)
 saveCoverButton.addEventListener('click', saveCover)
 window.addEventListener('load', addFirstCover)
-// selectedCover.addEventListener('hover', saveInfo)
-// selectedCover.addEventListener('dblclick', deleteCover)
+viewSaved.addEventListener('dblclick', deleteCover)
 
 
 // Create your event handlers and other functions here 👇
@@ -121,12 +120,11 @@ function saveCover() {
 }
 
 
-// function saveInfo(){
-//   selectedCover = 
-// }
 
-function deleteCover(){
-  savedCovers.splice(selectedCover, 1)
+function deleteCover(e){
+  var parent = e.target.parentElement
+  parent.remove()
+  console.log(parent)
 }
 
 
