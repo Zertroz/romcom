@@ -115,7 +115,7 @@ function saveCover() {
    <img class="price-tag" src="./assets/price.png">
    <img class="overlay" src="./assets/overlay.png">
    </section>`
-  
+
   }
 }
 
@@ -124,7 +124,11 @@ function saveCover() {
 function deleteCover(e){
   var parent = e.target.parentElement
   parent.remove()
-  console.log(parent)
+  for (var i = 0; i < savedCovers.length; i++) {
+    if (parent.id === savedCovers[i].id.toString()) {
+      savedCovers.splice(i, 1)
+    }
+  }
 }
 
 
