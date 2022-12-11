@@ -18,12 +18,12 @@ var firstDescriptorInput = document.querySelector(".user-desc1")
 var secondDescriptorInput = document.querySelector(".user-desc2")
 var miniCovers = document.querySelector('.saved-covers-section')
 
-
 // We've provided a few variables below
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
 var currentCover;
+var selectedCover;
 
 // Add your event listeners here 👇
 
@@ -34,6 +34,9 @@ viewSavedButton.addEventListener('click', savedCoversToggle)
 homeButton.addEventListener('click', homeButtonToggle)
 makeMyBookButton.addEventListener('click', makeMyBook, false)
 saveCoverButton.addEventListener('click', saveCover)
+window.addEventListener('load', addFirstCover)
+// selectedCover.addEventListener('hover', saveInfo)
+// selectedCover.addEventListener('dblclick', deleteCover)
 
 
 // Create your event handlers and other functions here 👇
@@ -87,19 +90,45 @@ function makeMyBook(){
   homeButtonToggle()
 }
 
+function addFirstCover(){
+  miniCovers.innerHTML +=
+`<section class="mini-cover" id ="${savedCovers[0].id}">
+   <img class="cover-image" src="http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg"> 
+   <h2 class="cover-title">Sunsets and Sorrows</h2>
+   <h3 class="tagline">A tale of <span class="tagline-1">sunsets</span> and <span class="tagline-2">sorrows</span></h3>
+   <img class="price-tag" src="./assets/price.png">
+   <img class="overlay" src="./assets/overlay.png">
+   </section>`
+}
+
+
+
+
+
 function saveCover() {
   if (!savedCovers.includes(currentCover)) {
-    savedCovers.push(currentCover)
-    miniCovers.innerHTML += 
-    `<section class="mini-cover">
-    <img class="cover-image" src="${coverImage.src}"> 
-    <h2 class="cover-title">${coverTitle.innerText}</h2>
-    <h3 class="tagline">A tale of <span class="tagline-1">${tag1.innerText}</span> and <span class="tagline-2">${tag2.innerText}</span></h3>
-    <img class="price-tag" src="./assets/price.png">
-    <img class="overlay" src="./assets/overlay.png">
-    </section>`
+   savedCovers.push(currentCover)
+   miniCovers.innerHTML += 
+   `<section class="mini-cover" id ="${currentCover.id}">
+   <img class="cover-image" src="${coverImage.src}"> 
+   <h2 class="cover-title">${coverTitle.innerText}</h2>
+   <h3 class="tagline">A tale of <span class="tagline-1">${tag1.innerText}</span> and <span class="tagline-2">${tag2.innerText}</span></h3>
+   <img class="price-tag" src="./assets/price.png">
+   <img class="overlay" src="./assets/overlay.png">
+   </section>`
+  
   }
 }
+
+
+// function saveInfo(){
+//   selectedCover = 
+// }
+
+function deleteCover(){
+  savedCovers.splice(selectedCover, 1)
+}
+
 
 // We've provided one function to get you started
 function getRandomIndex(array) {
